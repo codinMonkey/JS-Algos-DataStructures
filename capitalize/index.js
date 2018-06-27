@@ -22,4 +22,4 @@ const capitalize = (str) => {
 	return arr.join('');
 }
 
-console.log(capitalize('i love breakfast at bill miller bbq'));
+console.log(capitalize('this is vEry eaZy'));
