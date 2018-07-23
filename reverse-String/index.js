@@ -15,7 +15,6 @@ function reverse_helper(str) {
 
 const reverse = (str) => {
 	let finalStr = '';
-	let arr = [...str];
 
 	for (let char of str) {
 		finalStr = char + finalStr;

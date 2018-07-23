@@ -8,25 +8,21 @@
 const maxChar = (str) => {
 
 	let charList = {};
+	let maxLength = 0;
+	let maxChar = '';
 
 	for (let char of str) {
 		if (!charList[char]) {
 			charList[char] = 1
 		} else {
 			charList[char]++;
+			if (charList[char] > maxLength) {
+				maxLength = charList[char]
+				maxChar = char
+			}
 		}
 	}
-	
-	// using MAP
-	// const map = new Map();
-	// for (let char of str) {
-	// 	if (!map.get(char)) {
-	// 		map.set(char, 1);
-	// 	} else {
-	// 		map.set(char, map.get(char) + 1);
-	// 	}
-	// }
 
-	return charList
+	return maxChar
 }
 console.log(maxChar('adasdafdfadsda'));

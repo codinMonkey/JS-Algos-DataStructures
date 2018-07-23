@@ -13,10 +13,8 @@ const pyramid_recursive = (n, row = 1, step = '') => {
 
     // Build the step
     if ((n - row - 1) < step.length && step.length < ((2 * n - 1) - (n - row))) {
-        //console.log('if', step, step.length, row, n)
         step += '#'
     } else {
-        //console.log('else', step, step.length, row, n)
         step += '.'
     }
     return pyramid_recursive(n, row, step)

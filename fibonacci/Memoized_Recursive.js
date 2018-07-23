@@ -1,12 +1,11 @@
-
 //----------------- MEMOIZE function -----------------//
 
 const memoize = (fn) => {
 
     const cache = {}
-    
+
     return function (n) {
-        
+
         if (cache[n]) {
             return cache[n]
         }
@@ -25,10 +24,10 @@ const fib = (n) => {
     if (n < 2) {
         return n
     }
-    return newFib(n - 1) + newFib(n - 2)
+    return getFibs(n - 1) + getFibs(n - 2) // use the Memoized function
 }
 
 
-const newFib = memoize(fib)
+const getFibs = memoize(fib)
 
-console.log(newFib(100))
+console.log(getFibs(100))

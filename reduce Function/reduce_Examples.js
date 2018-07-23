@@ -3,7 +3,7 @@
 
 const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig'];
 
-const final = fruitBasket.reduce((acc, fruit, index, arr) => {
+const final = fruitBasket.reduce((acc, fruit) => {
     acc[fruit] = (acc[fruit] || 1) + 1
     return acc;
 }, {})
@@ -28,16 +28,20 @@ console.log(avg)
 
 
 // ###############################################################################
-// Flat out Array of Arrays
+// Flat out Array of Arrays - just 1 level deep
 
-const data = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11], [12]];
+const data = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [10, 11],
+    [12]
+];
 
-const flatData = data.reduce((flatArray, element, index, arr) => { 
+const flatData = data.reduce((flatArray, element) => {
 
     flatArray.push(...element);
     return flatArray
 }, [])
 
 console.log(flatData)
-
-
